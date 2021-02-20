@@ -48,11 +48,18 @@ $(function () {
     return false;
   });
 
-  turn($(".logo-name"), 80);
-  turn($(".logo-title"), 100);
+  setTimeout(function(){
+    $('.anime').fadeOut();
+  },3000);
 
-  function turn(container, speed) {
-    // テキストの間にスペースを入れます
+  setTimeout(function(){
+    turn($(".logo-name"), 80);
+    turn($(".logo-title"), 100);
+  },3050);
+
+  //1文字ずつ表示
+  function turn(container, speed) { 
+    // テキストの間にスペースを入れる
     var content = $(container).html();
     var text = $.trim(content);
     var newHtml = "";
