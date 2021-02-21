@@ -20,9 +20,11 @@
 </head>
 
 <body>
-  <div class="anime">
-    <img src="img/fish.gif"/>
+  <!-- loading screen -->
+  <div class="load">
+    <p><img src="img/load.gif"/></p>
   </div>
+  <!-- /loading screen -->
 
   <div class="wrapper">
 
@@ -196,7 +198,7 @@
                   </div>
                   <p>
                     主に以下のツールを使用しています．<br>
-                    Slack/Visual Studio Code/eclipse<br>/PowerPoint
+                    Slack/Visual Studio Code/eclipse<br>/PowerPoint/TeX
                   </p>
                 </div>
               </div>
@@ -219,19 +221,19 @@
           <div class="section-body works">
             <div class="works-list js-my-gallery">
               <figure class="works-item">
-                <a href="img/works/portfolio.png" data-size="980x668" class="works-link works-image-wrapper hover-action">
+                <a class="works-image" href="https://github.com/ChinnanagoSGE/portfolio" target="_blank">
                   <img class="works-image fadein lazyloaded" src="img/works/portfolio.png" alt="">
                 </a>
                 <figcaption class="works-body">
                   <div class="works-title">ポートフォリオ</div>
-                  <div class="works-text">ポートフォリオです．<br>(HTML/CSS/JavaScript)</div>
+                  <div class="works-text">自己紹介ポートフォリオサイトです．<br>(HTML/CSS/JavaScript)</div>
                   <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/portfolio" target="_blank">GitHub</a>
                   </div>
                 </figcaption>
               </figure>
 
               <figure class="works-item">
-                <a href="img/works/map.png" data-size="980x668" class="works-link works-image-wrapper hover-action">
+                <a class="works-image" href="https://github.com/ChinnanagoSGE/offline_map" target="_blank">
                   <img class="works-image fadein lazyloaded" src="img/works/map.png" alt="">
                 </a>
                 <figcaption class="works-body">
@@ -243,7 +245,7 @@
               </figure>
 
               <figure class="works-item">
-                <a href="img/works/coming_soon.png" data-size="980x668" class="works-link works-image-wrapper hover-action">
+                <a href="img/works/coming_soon.png" target="_blank">
                   <img class="works-image fadein lazyloaded" src="img/works/coming_soon.png" alt="">
                 </a>
                 <figcaption class="works-body">
@@ -266,15 +268,23 @@
           </div>
           <div class="section-lead">
             <p>
-              お問合わせは下記のSNSからご連絡をください。
+              お問合わせは下記のSNSからご連絡をください.
             </p>
           </div>
           <div class="section-body contact">
             <ul class="contact-list">
               <li class="contact-item">
-                <a class="contact-image-wrapper" href="https://twitter.com/ojohojo_tech" target="_blank"><img class="contact-image"
-                    src="img/contact/Twitter.png" alt="">
-                  <span class="contact-name">Twitter</span></a>
+                <a class="contact-image-wrapper" href="https://twitter.com/ojohojo_tech" target="_blank">
+                  <img class="contact-image" src="img/contact/Twitter.png" alt="">
+                  <span class="contact-name">Twitter</span>
+                </a>
+              </li>
+              
+              <li class="contact-item">
+                <a class="contact-image-wrapper" href="https://github.com/ChinnanagoSGE" target="_blank">
+                  <img class="contact-image" src="img/contact/GitHub.png" alt="">
+                  <span class="contact-name">GitHub</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -375,6 +385,7 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="js/photoswipe/photoswipe.min.js"></script>
   <script src="js/photoswipe/photoswipe-ui-default.js"></script>
   <script src="js/photoswipe/photoswipe-setup.js"></script>

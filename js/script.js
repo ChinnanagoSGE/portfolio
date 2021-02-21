@@ -4,8 +4,12 @@ initPhotoSwipeFromDOM('.js-my-gallery');
 $(function () {
 
   //Worksのリンクを有効化
-  //スライド（Swiper）内に記載のリンクを有効にするため下記の記述が必要 (;´･ω･)ｳｰﾝ･･･
+  //スライド（Swiper）内に記載のリンクを有効にするため下記の記述が必要
   $(".works-url").on("click", "a", function (e) {
+    e.stopPropagation();
+  });
+
+  $(".works-image").on("click", "img", function (e) {
     e.stopPropagation();
   });
 
@@ -18,6 +22,7 @@ $(function () {
     return false;
   });
 
+
   //固定ヘッダー
   $(window).scroll(function () {
     if ($(window).scrollTop() >= offset.top) {
@@ -28,6 +33,7 @@ $(function () {
       $("body").css("margin-top", "0");
     }
   });
+
 
   //ページ内スクロール
   var $nav = $(".gnav");
@@ -48,16 +54,34 @@ $(function () {
     return false;
   });
 
-  setTimeout(function(){
-    $('.anime').fadeOut();
-  },3000);
+
+  //ロード画面
+  $(function() {
+    setTimeout(function(){
+      //ロード画面をフェードイン
+      $('.load p').fadeIn(500);
+
+      //スクロール禁止
+      document.addEventListener('touchmove', noScroll, { passive: false });
+      document.addEventListener('mousewheel', noScroll, { passive: false });
+    },100); //0.1秒後に実行
+
+    setTimeout(function(){
+      //ロード画面をフェードアウト
+      $('.load').fadeOut(100);
+
+      //スクロール禁止を解除
+      document.removeEventListener('touchmove', noScroll, { passive: false });
+      document.removeEventListener('mousewheel', noScroll, { passive: false });
+    },3000); //3秒後に実行
+  });
 
   setTimeout(function(){
     turn($(".logo-name"), 80);
     turn($(".logo-title"), 100);
-  },3050);
+  },3000);//3秒後にロゴを1文字ずつ表示
 
-  //1文字ずつ表示
+  //1文字ずつ表示する関数
   function turn(container, speed) { 
     // テキストの間にスペースを入れる
     var content = $(container).html();
@@ -79,5 +103,26 @@ $(function () {
       txtNum++
     }, speed);
   }
+
+  // スクロールを禁止する関数
+  function noScroll(event) {
+    event.preventDefault();
+  }
+
+  
+  //ABOUTの画像のアニメーション
+  ScrollReveal().reveal('.about-image', { 
+    duration: 1200, 
+    scale: 0.1,
+    reset: true
+  });
+
+  //SKILLの画像のアニメーション
+  ScrollReveal().reveal('.skill-image', { 
+    duration: 1300, 
+    origin: 'left', 
+    distance: '50px',
+    reset: true   
+  });
 
 });
