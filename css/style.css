@@ -248,6 +248,45 @@ table td {
 } 
 
 /*--------------------------------
+ Career
+---------------------------------*/
+.career-section .inner {
+  max-width: 1000px;
+}
+  
+.career-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.career-body {
+  flex: 1; 
+}
+
+.career-body p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table th {
+  text-align: left;
+}
+
+table td {
+  padding-left: 70px;
+  text-align: left;
+}
+
+.career-url:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/*--------------------------------
  Skill
 ---------------------------------*/
 .skill-section .inner {
@@ -369,7 +408,7 @@ table td {
 }
 
 .award-url:hover {
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
 }
 
 .award-image:hover {
@@ -579,6 +618,25 @@ table td {
     max-width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
+  }
+
+  /* Award */
+  .award-body {
+    text-align: left;
+  }
+
+  .award-title {
+    font-size: 10px;
+  }
+
+  .award-list {
+    justify-content: space-between;
+  }
+
+  .award-item {
+    flex: 0 0 48%;
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 
   /* Works */

@@ -3,6 +3,16 @@ initPhotoSwipeFromDOM('.js-my-gallery');
 
 $(function () {
 
+  //Awardのリンクを有効化
+  //スライド（Swiper）内に記載のリンクを有効にするため下記の記述が必要
+  $(".award-url").on("click", "a", function (e) {
+    e.stopPropagation();
+  });
+
+  $(".award-image").on("click", "img", function (e) {
+    e.stopPropagation();
+  });
+  
   //Worksのリンクを有効化
   //スライド（Swiper）内に記載のリンクを有効にするため下記の記述が必要
   $(".works-url").on("click", "a", function (e) {
