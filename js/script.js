@@ -83,13 +83,13 @@ $(function () {
       //スクロール禁止を解除
       document.removeEventListener('touchmove', noScroll, { passive: false });
       document.removeEventListener('mousewheel', noScroll, { passive: false });
-    },3000); //3秒後に実行
+    },2000); //3秒後に実行
   });
 
   setTimeout(function(){
     turn($(".logo-name"), 80);
     turn($(".logo-title"), 100);
-  },3000);//3秒後にロゴを1文字ずつ表示
+  },2000);//3秒後にロゴを1文字ずつ表示
 
   //1文字ずつ表示する関数
   function turn(container, speed) { 
