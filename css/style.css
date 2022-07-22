@@ -238,12 +238,12 @@ table {
   margin-right: auto;
 }
 
-table th {
+.about-table th {
   text-align: left;
 }
 
-table td {
-  padding-left: 70px;
+.about-table td {
+  padding-left: 50px;
   text-align: left;
 } 
 
@@ -271,6 +271,11 @@ table td {
 .career-table {
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
+}
+
+.career-table td {
+  padding-left: 30px;
 }
 
 .career-url:hover {
