@@ -140,5 +140,4 @@ $(function () {
     distance: '50px',
     reset: true   
   });
-
 });

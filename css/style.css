@@ -48,6 +48,30 @@ li {
   display: none;
 }
 
+#mouse-stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background: rgba(104, 104, 104, 0.75);
+  border-radius: 50%;
+  transform: translate(0,0);
+  transition: transform 0.2s;
+  transition-timing-function: ease-out;
+  z-index: 999;
+}
+
+#mouse-stalker.hover{
+  top: -8px;
+  left: -8px;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.05);
+  border: solid 2px #6bb6ff;
+}
+
 /*--------------------------------
  文字
 ---------------------------------*/
@@ -122,7 +146,9 @@ li {
   align-items: center;
   justify-content: center;
   height: 540px;
-  background: url(../img/header.png) center/cover no-repeat;
+  background: url(../img/header_ranway.gif) center/cover repeat;
+  background-size: cover;
+  animation: bgiLoop 10s linear infinite;
 }
 
 .logo {
