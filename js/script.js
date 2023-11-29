@@ -23,7 +23,7 @@ $(function () {
     e.stopPropagation();
   });
 
-  //Carrersのリンクを有効化
+  //Careersのリンクを有効化
   //スライド（Swiper）内に記載のリンクを有効にするため下記の記述が必要
   $(".career-url").on("click", "a", function (e) {
     e.stopPropagation();
