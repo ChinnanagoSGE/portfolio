@@ -78,7 +78,7 @@ li {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 50px 0;
 }
 
 .inner {
@@ -378,12 +378,18 @@ table {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -40px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .award-item {
-  flex: 0 0 32.31552%;
-  margin-right: 1.52671%;
+  flex: 0 0 30%;
+  margin-right: 1%;
+  margin-left: 1%;
   margin-bottom: 40px;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
 }
 
 .award-item:nth-of-type(3n) {
@@ -391,7 +397,10 @@ table {
 }
 
 .award-body {
+  width: fit-content;
+  margin: auto;
   text-align: center;
+  justify-content: center;
 }
 
 .award-title {
@@ -400,7 +409,7 @@ table {
 }
 
 .award-image fadein lazyloaded {
-  height: 130px;
+  height: 100px;
 }
 
 .award-url:hover {
@@ -409,6 +418,22 @@ table {
 
 .award-image:hover {
   transform: scale(1.1, 1.1);
+}
+
+/*--------------------------------
+ publications
+---------------------------------*/
+.publications-table th {
+  text-align: left;
+}
+
+.publications-table td {
+  padding-left: 50px;
+  text-align: left;
+} 
+
+.publications-table tr{
+  padding: 20px;
 }
 
 /*--------------------------------
@@ -617,10 +642,6 @@ table {
   }
 
   /* Award */
-  .award-body {
-    text-align: left;
-  }
-
   .award-title {
     font-size: 10px;
   }
