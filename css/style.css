@@ -69,7 +69,7 @@ li {
   width: 20px;
   height: 20px;
   background: rgba(0, 0, 0, 0.05);
-  border: solid 2px #6bb6ff;
+  border: solid 2px #ac42f8;
 }
 
 /*--------------------------------
@@ -146,7 +146,7 @@ li {
   align-items: center;
   justify-content: center;
   height: 540px;
-  background: url(../img/header_ranway.gif) center/cover repeat;
+  background: url(../img/header_runway_loop.gif) center/cover repeat;
   background-size: cover;
   animation: bgiLoop 10s linear infinite;
 }
@@ -305,7 +305,7 @@ table {
 }
 
 .career-url:hover {
-  transform: scale(1.05, 1.1);
+  transform: scale(1.05, 1.05);
 }
 
 /*--------------------------------
