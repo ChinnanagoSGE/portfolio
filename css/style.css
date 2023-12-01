@@ -11,8 +11,9 @@ body {
   font-size: 15px;
   line-height: 1.8;
   letter-spacing: .8px;
-  word-break: break-all;
   color: #333;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -192,7 +193,7 @@ li {
 }
 
 .section {
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 .inner {
@@ -209,7 +210,7 @@ li {
 ロード画面
 ---------------------------------*/
 .load {
-  background: #8dd1d9;
+  background: #85cbd3;
   position: fixed;
   top: 0;
   left: 0;
@@ -394,6 +395,11 @@ table {
   padding-left: 30px;
 }
 
+.career-url-link {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 .career-url:hover {
   transform: scale(1.05, 1.05);
 }
@@ -401,15 +407,14 @@ table {
 /*--------------------------------
  Skill
 ---------------------------------*/
-.skill-section .inner {
-  max-width: 1000px;
-}
 
 .skill-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: -50px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .skill-item {
@@ -496,6 +501,9 @@ table {
   margin-bottom: -40px;
   justify-content: space-between;
   align-items: flex-start;
+  width: 90%;
+  margin: 0 auto;
+
 }
 
 .award-item {
@@ -552,6 +560,11 @@ table {
   padding: 20px;
 }
 
+.publications-table th:first-child, .publications-table td:first-child {
+  white-space: nowrap;
+  width: 100px;
+}
+
 /*--------------------------------
  Works
 ---------------------------------*/
@@ -562,8 +575,9 @@ table {
 }
 
 .works-item {
-  flex: 0 0 32.31552%;
-  margin-right: 1.52671%;
+  flex: 0 0 30%;
+  margin-right: 1%;
+  margin-left: 1%;
   margin-bottom: 40px;
 }
 
