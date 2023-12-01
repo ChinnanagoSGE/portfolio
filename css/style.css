@@ -48,7 +48,7 @@ li {
   display: none;
 }
 
-#mouse-stalker {
+/* #mouse-stalker {
   pointer-events: none;
   position: fixed;
   top: -5px;
@@ -70,6 +70,96 @@ li {
   height: 20px;
   background: rgba(0, 0, 0, 0.05);
   border: solid 2px #ac42f8;
+} */
+
+#fish_guppi {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  opacity: 0.0;
+}
+
+#fish_hone_footer {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  opacity: 0.0;
+}
+
+#fish_hone_gnav {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  opacity: 0.0;
+}
+
+#fish_iruka {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  opacity: 0.0;
+}
+
+#fish_kujira {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  opacity: 0.0;
+}
+
+#fish_kumanomi {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  opacity: 0.0;
+}
+
+#fish_kurage {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  opacity: 0.0;
+}
+
+#fish_maguro {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  opacity: 0.0;
+}
+
+#fish_same {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  opacity: 0.0;
+}
+
+#fish_syachi {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  opacity: 0.0;
 }
 
 /*--------------------------------
