@@ -76,6 +76,9 @@ var PhotoSwipeUI_Default =
 
 			clickToCloseNonZoomable: true,
 
+			preventClicks: false,
+			preventClicksPropagation: false,
+
 			shareButtons: [
 				{id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
 				{id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'},

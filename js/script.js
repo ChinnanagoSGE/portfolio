@@ -29,6 +29,15 @@ $(function () {
     e.stopPropagation();
   });
 
+  //Publicationsのリンクを有効化
+  //スライド（Swiper）内に記載のリンクを有効にするため下記の記述が必要
+  $(".publication-url").on("click", "a", function (e) {
+    e.stopPropagation();
+  });
+  $(".publication-url-japan").on("click", "a", function (e) {
+    e.stopPropagation();
+  });
+
 
   //ページトップへもどる
   $('#js-page-top').on('click', function () {
@@ -70,32 +79,39 @@ $(function () {
     return false;
   });
 
+  var webStorage = function () {
+    if (sessionStorage.getItem('access')) {
+      $(".loading").addClass('is-active');
+      $(".loading-animation").addClass('is-active');
+    } else {
+      sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
 
-  //ロード画面
-  $(function() {
-    setTimeout(function(){
-      //ロード画面をフェードイン
-      $('.load p').fadeIn(500);
+      setTimeout(function(){
+        //ロード画面をフェードイン
+        $('.loading-animation').fadeIn(500);
 
-      //スクロール禁止
-      document.addEventListener('touchmove', noScroll, { passive: false });
-      document.addEventListener('mousewheel', noScroll, { passive: false });
-    },100); //0.1秒後に実行
+        //スクロール禁止
+        document.addEventListener('touchmove', noScroll, { passive: false });
+        document.addEventListener('mousewheel', noScroll, { passive: false });
+      },100); //0.1秒後に実行
 
-    setTimeout(function(){
-      //ロード画面をフェードアウト
-      $('.load').fadeOut(100);
+      setTimeout(function(){
+        //ロード画面をフェードアウト
+        $('.loading').fadeOut(100);
 
-      //スクロール禁止を解除
-      document.removeEventListener('touchmove', noScroll, { passive: false });
-      document.removeEventListener('mousewheel', noScroll, { passive: false });
-    },2000); //3秒後に実行
-  });
-
-  setTimeout(function(){
-    turn($(".logo-name"), 80);
-    turn($(".logo-title"), 100);
-  },2000);//3秒後にロゴを1文字ずつ表示
+        //スクロール禁止を解除
+        document.removeEventListener('touchmove', noScroll, { passive: false });
+        document.removeEventListener('mousewheel', noScroll, { passive: false });
+      },2000); //2秒後に実行
+      
+      setTimeout(function(){
+        turn($(".logo-name"), 80);
+        turn($(".logo-title"), 100);
+      },2000);//2秒後にロゴを1文字ずつ表示
+      
+    }
+  }
+  webStorage();
 
   //1文字ずつ表示する関数
   function turn(container, speed) { 

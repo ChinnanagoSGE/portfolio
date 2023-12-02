@@ -21,9 +21,19 @@
 
 <body>
   <!-- loading screen -->
-  <div class="load">
-    <p><img src="img/load.gif"/></p>
+  <div class="loading">
+    <div class="loading-animation"><img src="img/load.gif"/></div>
   </div>
+  <script>
+    (function () {
+      const keyName = 'visited';
+      if (!sessionStorage.getItem(keyName)) {
+        sessionStorage.setItem(keyName, true);
+      } else {
+        document.getElementsByClassName("loading")[0].style.display = "none";
+      }
+    })();
+  </script>
   <!-- /loading screen -->
 
   <div class="wrapper">
@@ -89,7 +99,7 @@
                   高専から大学に3年次編入し，現在情報系大学院生の北条直樹です．<br>
                   高専では電子工学科に在籍し，卒業研究では生体電気信号を用いたHMIの開発を行いました．<br>
                   また，高専時代には産学共同プロジェクトに参加しており，電子工作とプログラミングの技術を活かして，ラリーレースに出場する車の補助システムの開発を行いました．<br>
-                  現在は，大学の学部から引き続きで脳波や脳神経細胞などの脳機能に関する研究や，アイトラッキングの応用研究や音声認識の研究を行っています．<br>
+                  現在は，大学の学部から引き続きで脳波や脳神経細胞などの『脳機能に関する研究』や，『アイトラッキング』の応用研究，『音声認識』の研究を行っています．<br>
                 </p>
               </div>
             </div>
@@ -111,38 +121,61 @@
                   <br>
                   <table>
                     <tr>
-                      <th>2016/4～2021/3</th>
+                      <th>
+                        <p class="career-period">2016/4～2021/3</p>
+                      </th>
                       <td>
-                        神戸市立工業高等専門学校 
-                        <a class="career-url-link" href="http://www.kobe-kosen.ac.jp/groups/denshi/" target="_blank">電子工学科</a></div><br>
-                        <div class="career-url"><a class="career-url-link" href="https://sites.google.com/g.kobe-kosen.ac.jp/kobe-kosen-robotics/research/oyama" target="_blank">　　尾山研究室</a></div>
-                        <div class="career-url"><a class="career-url-link" href="http://www.kobe-kosen.ac.jp/education/program/1st_announce.html" target="_blank">　　神戸高専 成長産業技術者教育プログラム ロボット分野2期生</a></div>
-                        <div class="career-url"><a class="career-url-link" href="https://www.facebook.com/Copen-Rally-Project-2189913394664165/" target="_blank">　　Copen Rally Project 2020</a></div>
-                        <div class="career-url"><a class="career-url-link" href="https://sites.google.com/g.kobe-kosen.ac.jp/kobe-kosen-robotics/home" target="_blank">　　KOBE KOSEN ROBOTICS</a></div>
-                        <div>　　富士通アプリケーションズ株式会社（現 富士通株式会社） インターンシップ参加</div>
+                        <p class="career-school">
+                          <a href="http://www.kobe-kosen.ac.jp/groups/denshi/">神戸市立工業高等専門学校 電子工学科</a>
+                        </p>
+                        <div class="career-overview">
+                          <a class="career-url" href="https://sites.google.com/g.kobe-kosen.ac.jp/kobe-kosen-robotics/research/oyama">尾山研究室</a><br>
+                          <a class="career-url" href="http://www.kobe-kosen.ac.jp/education/program/1st_announce.html">神戸高専 成長産業技術者教育プログラム ロボット分野2期生</a><br>
+                          <a class="career-url" href="https://www.facebook.com/Copen-Rally-Project-2189913394664165/">Copen Rally Project 2020</a><br>
+                          <a class="career-url" href="https://sites.google.com/g.kobe-kosen.ac.jp/kobe-kosen-robotics/home">KOBE KOSEN ROBOTICS</a><br>
+                          <p class="career-detail">
+                            富士通アプリケーションズ株式会社（現 富士通株式会社） インターンシップ参加
+                          </p>
+                        </div>
                       </td>
                     </tr>
                     <tr>
                       <td>&nbsp;</td>
                     </tr>
                     <tr>
-                      <th>2021/4～2023/3</th>
+                      <th>
+                        <p class="career-period">2021/4～2023/3</p>
+                      </th>
                       <td>
-                        神戸大学 工学部 情報知能工学科
-                        <div class="career-url"><a class="career-url-link" href="http://www.me.cs.scitec.kobe-u.ac.jp/" target="_blank">　　滝口研究室</a></div>
-                        <div>　　ヤフー株式会社（現 LINEヤフー株式会社） インターンシップ参加</div>
-                        <div>　　ソフトバンク株式会社 インターンシップ参加</div>
+                        <p class="career-school">
+                          <a href="http://www.csi.kobe-u.ac.jp//">神戸大学 工学部 情報知能工学科</a>
+                        </p>
+                        <div class="career-overview">
+                          <a class="career-url" href="http://www.me.cs.scitec.kobe-u.ac.jp/">滝口研究室</a><br>
+                          <p class="career-detail">
+                            ヤフー株式会社（現 LINEヤフー株式会社） インターンシップ参加<br>
+                            ソフトバンク株式会社 インターンシップ参加
+                          </p>
+                        </div>
                       </td>
                     </tr>
                     <tr>
                       <td>&nbsp;</td>
                     </tr>
                     <tr>
-                      <th>2023/4～</th>
+                      <th>
+                        <p class="career-period">2023/4〜</p>
+                      </th>
                       <td>
-                        神戸大学大学院 システム情報学研究科 システム情報学専攻 博士課程前期課程
-                        <div class="career-url"><a class="career-url-link" href="http://www.me.cs.scitec.kobe-u.ac.jp/" target="_blank">　　滝口研究室</a></div>
-                        <div>　　東日本電信電話株式会社（NTT東日本） インターンシップ参加</div>
+                        <p class="career-school">
+                          <a href="http://www.csi.kobe-u.ac.jp//">神戸大学大学院 システム情報学研究科 システム情報学専攻 博士課程前期課程</a>
+                        </p>
+                        <div class="career-overview">
+                          <a class="career-url" href="http://www.me.cs.scitec.kobe-u.ac.jp/">滝口研究室</a><br>
+                          <p class="career-detail">
+                            東日本電信電話株式会社（NTT東日本） インターンシップ参加
+                          </p>
+                        </div>
                       </td>
                     </tr>
                   </table>
@@ -284,30 +317,30 @@
             <div class="award-list js-my-gallery">
 
               <figure class="award-item">
-                <a class="award-image" href="http://www.ieee-lifetech.org/2022/awards.html" target="_blank">
+                <a class="award-image" href="http://www.ieee-lifetech.org/2022/awards.html">
                   <img class="award-image fadein lazyloaded" src="img/award/ieee_life_tech.JPG" alt="">
                 </a>
                 <figcaption class="award-body">
                   <div class="award-title">IEEE LifeTech 2022 "3rd Prize, IEEE LifeTech 2022 Excellent Paper Award for On-site Poster Presentation"</div>
                   <div class="award-text">発表題目<br>"Development of communication system from EMG of suprahyoid muscles using deep learning"</div>
-                  <div class="award-url"><a class="award-url-link" href="http://www.ieee-lifetech.org/2022/awards.html" target="_blank">詳細はこちら</a></div>
-                  <div class="award-url"><a class="award-url-link" href="https://ieeexplore.ieee.org/document/9754898" target="_blank">論文はこちら</a></div>
+                  <div class="award-url"><a class="award-url-link" href="http://www.ieee-lifetech.org/2022/awards.html">詳細はこちら</a></div>
+                  <div class="award-url"><a class="award-url-link" href="https://ieeexplore.ieee.org/document/9754898">論文はこちら</a></div>
                 </figcaption>
               </figure>
 
               <figure class="award-item">
-                <a class="award-image" href="https://kosen-sympo.org/26th/presenaward/" target="_blank">
+                <a class="award-image" href="https://kosen-sympo.org/26th/presenaward/">
                   <img class="award-image fadein lazyloaded" src="img/award/kosensymposium.png" alt="">
                 </a>
                 <figcaption class="award-body">
                   <div class="award-title">第26回高専シンポジウム「豊橋技術科学大学学長賞」</div>
                   <div class="award-text">発表題目<br>「舌骨上筋群のsEMGを用いた可変長時間での黙声単語の推定」</div>
-                  <div class="award-url"><a class="award-url-link" href="https://kosen-sympo.org/26th/presenaward/" target="_blank">詳細はこちら</a></div>
+                  <div class="award-url"><a class="award-url-link" href="https://kosen-sympo.org/26th/presenaward/">詳細はこちら</a></div>
                 </figcaption>
               </figure>
 
               <figure class="award-item">
-                <a class="award-image" href="img/award/kosen_gakkochosyo.png" target="_blank">
+                <a class="award-image" href="img/award/kosen_gakkochosyo.png">
                   <img class="award-image fadein lazyloaded" src="img/award/kosen_gakkochosyo.png" alt="">
                 </a>
                 <figcaption class="award-body">
@@ -317,7 +350,7 @@
               </figure>
 
               <figure class="award-item">
-                <a class="award-image" href="img/award/kosen_reserch_gakkochosyo.png" target="_blank">
+                <a class="award-image" href="img/award/kosen_reserch_gakkochosyo.png">
                   <img class="award-image fadein lazyloaded" src="img/award/kosen_reserch_gakkochosyo.png" alt="">
                 </a>
                 <figcaption class="award-body">
@@ -327,7 +360,7 @@
               </figure>
 
               <figure class="award-item">
-                <a class="award-image" href="img/award/kosen_kaikin.png" target="_blank">
+                <a class="award-image" href="img/award/kosen_kaikin.png">
                   <img class="award-image fadein lazyloaded" src="img/award/kosen_kaikin.png" alt="">
                 </a>
                 <figcaption class="award-body">
@@ -337,7 +370,7 @@
               </figure>
 
               <figure class="award-item">
-                <a class="award-image" href="img/award/kosen_robotics.png" target="_blank">
+                <a class="award-image" href="img/award/kosen_robotics.png">
                   <img class="award-image fadein lazyloaded" src="img/award/kosen_robotics.png" alt="">
                 </a>
                 <figcaption class="award-body">
@@ -361,46 +394,70 @@
             これまで投稿した論文や発表した学会です！
           </p>
           <div class="section-body publication">
-            <div class="publication-list js-my-gallery">
+            <div class="publication-list">
               <ul>
-                <div class="publications-table">
+                <div class="publication-table">
                   <p>
                     <table>
                       <tr>
                         <td>2021年1月</td>
-                        <td>第26回高専シンポジウム<br>
-                          <div class="career-url"><a class="career-url-link" href="https://kosen-sympo.org/26th/presenaward/" target="_blank"> 「舌骨上筋群のsEMGを用いた可変長時間での黙声単語の推定」</a></div><br>
+                        <td>
+                          <p class="publication-conference">第26回 高専シンポジウム</p>
+                          <div class="publication-paper">
+                            <a class="publication-url-japan" href="https://kosen-sympo.org/26th/presenaward/">「舌骨上筋群のsEMGを用いた可変長時間での黙声単語の推定」</a><br>
+                          </div>
+                          <br>
                         </td>
                       </tr>
                       <tr>
                         <td>2022年3月</td>
-                        <td>IEEE LifeTech, 2022<br>
-                          <div class="career-url"><a class="career-url-link" href="https://ieeexplore.ieee.org/document/9754898" target="_blank">  “Development of communication system from EMG of suprahyoid muscles using deep learning”</a></div><br>
+                        <td>
+                          <p class="publication-conference">The 2022 IEEE 4th Global Conference on Life Sciences and Technologies (LifeTech 2022)</p>
+                          <div class="publication-paper">
+                            <a class="publication-url" href="https://ieeexplore.ieee.org/document/9754898"> “Development of communication system from EMG of suprahyoid muscles using deep learning”</a><br>
+                          </div>
+                          <br>
                         </td>
                       </tr>
                       <tr>
                         <td>2023年3月</td>
-                        <td>2023 RISP International Workshop on NCSP<br>
-                          <div class="career-url"><a class="career-url-link" href="http://www.me.cs.scitec.kobe-u.ac.jp/~takigu/pdf/2023/hojo-risp.pdf" target="_blank">  “EEG Current Source Localization Using Deep Prior”</a></div><br>
+                        <td>
+                          <p class="publication-conference">2023 RISP International Workshop on NCSP</p>
+                          <div class="publication-paper">
+                            <a class="publication-url" href="http://www.me.cs.scitec.kobe-u.ac.jp/~takigu/pdf/2023/hojo-risp.pdf"> “EEG Current Source Localization Using Deep Prior”</a><br>
+                          </div>
+                          <br>
                         </td>
                       </tr>
                       <tr>
                         <td>2023年3月</td>
-                        <td>日本音響学会 第149回（2023年春季）研究発表会<br>
-                         <div class="career-url"><a class="career-url-link" href="http://www.me.cs.scitec.kobe-u.ac.jp/~takigu/pdf/2023/1-4P-15_hojo.pdf" target="_blank"> 「Deep Priorを用いた脳波からのForward modelと電流源の同時推定」</a></div>
-                         <div class="career-url"><a class="career-url-link" href="http://www.me.cs.scitec.kobe-u.ac.jp/~takigu/pdf/2023/3-4P-3_yama.pdf" target="_blank"> 「EEGNetを用いた脳磁界データによる想起時の音声識別の検討」</a></div><br>
-                       </td>
+                        <td>
+                          <p class="publication-conference">日本音響学会 第149回（2023年春季）研究発表会</p>
+                          <div class="publication-paper">
+                            <a class="publication-url-japan" href="http://www.me.cs.scitec.kobe-u.ac.jp/~takigu/pdf/2023/1-4P-15_hojo.pdf">「Deep Priorを用いた脳波からのForward modelと電流源の同時推定」</a><br>
+                            <a class="publication-url-japan" href="http://www.me.cs.scitec.kobe-u.ac.jp/~takigu/pdf/2023/3-4P-3_yama.pdf">「EEGNetを用いた脳磁界データによる想起時の音声識別の検討」</a><br>
+                          </div>
+                          <br>
+                        </td>
                       </tr>
                       <tr>
                         <td>2023年5月</td>
-                        <td>ISACM and JBBS 2023<br>
-                          <div class="career-url"><a class="career-url-link" href="https://web.apollon.nta.co.jp/isacm2023/index.html" target="_blank">  “Simultaneous estimation of a lead field and current sources of EEG using Deep Prior”</a></div><br>
+                        <td>
+                          <p class="publication-conference">ISACM and JBBS 2023</p>
+                          <div class="publication-paper">
+                            <a class="publication-url" href="https://web.apollon.nta.co.jp/isacm2023/index.html"> “Simultaneous estimation of a lead field and current sources of EEG using Deep Prior”</a><br>
+                          </div>
+                          <br>
                         </td>
                       </tr>
                       <tr>
                         <td>2023年6月</td>
-                        <td>ICASSP 2023 EEG Workshop<br>
-                          <div class="career-url"><a class="career-url-link" href="https://ieeexplore.ieee.org/document/10193746" target="_blank">  “EEG Source Estimation Using Deep Prior without a Subject's Individual Lead Field”</a></div>
+                        <td>
+                          <p class="publication-conference">ICASSP 2023 EEG Workshop</p>
+                          <div class="publication-paper">
+                            <a class="publication-url" href="https://ieeexplore.ieee.org/document/10193746"> “EEG Source Estimation Using Deep Prior without a Subject's Individual Lead Field”</a><br>
+                          </div>
+                          <br>
                         </td>
                       </tr>
                     </table>
@@ -426,69 +483,69 @@
           <div class="section-body works">
             <div class="works-list js-my-gallery">
               <figure class="works-item">
-                <a class="works-image" href="https://github.com/ChinnanagoSGE/portfolio" target="_blank">
+                <a class="works-image" href="https://github.com/ChinnanagoSGE/portfolio">
                   <img class="works-image fadein lazyloaded" src="img/works/portfolio.png" alt="">
                 </a>
                 <figcaption class="works-body">
                   <div class="works-title">ポートフォリオ</div>
                   <div class="works-text">自己紹介ポートフォリオサイトです．<br>(HTML/CSS/JavaScript)</div>
-                  <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/portfolio" target="_blank">GitHub</a>
+                  <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/portfolio">GitHub</a>
                   </div>
                 </figcaption>
               </figure>
 
               <figure class="works-item">
-                <a class="works-image" href="https://drive.google.com/drive/folders/1PtKQWhW64_mTRkEUdZfhyoLEIdSSh0LG?usp=sharing" target="_blank">
-                  <img class="works-image fadein lazyloaded" src="img/works/sotsuken.png" alt="">
+                <a class="works-image" href="https://drive.google.com/drive/folders/1PtKQWhW64_mTRkEUdZfhyoLEIdSSh0LG?usp=sharing">
+                  <img class="works-image fadein lazyloaded" src="img/works/sotsuken.jpg" alt="">
                 </a>
                 <figcaption class="works-body">
                   <div class="works-title">卒業研究</div>
                   <div class="works-text">高専の卒業研究の論文等です．<br>(Python(プログラムの共有なし))</div>
-                  <div class="works-url"><a class="works-url-link" href="https://drive.google.com/drive/folders/1PtKQWhW64_mTRkEUdZfhyoLEIdSSh0LG?usp=sharing" target="_blank">Google Drive</a>
+                  <div class="works-url"><a class="works-url-link" href="https://drive.google.com/drive/folders/1PtKQWhW64_mTRkEUdZfhyoLEIdSSh0LG?usp=sharing">Google Drive</a>
                   </div>
                 </figcaption>
               </figure>
 
               <figure class="works-item">
-                <a class="works-image" href="https://github.com/ChinnanagoSGE/offline_map" target="_blank">
-                  <img class="works-image fadein lazyloaded" src="img/works/map.png" alt="">
+                <a class="works-image" href="https://github.com/ChinnanagoSGE/offline_map">
+                  <img class="works-image fadein lazyloaded" src="img/works/map.jpg" alt="">
                 </a>
                 <figcaption class="works-body">
                   <div class="works-title">オフラインマップ</div>
                   <div class="works-text">GPSモジュールを取り付けたRaspberry Piで動作します．産学共同プロジェクトで管理していたものを個別でアップしました．<br>(Python/HTML/JavaScript/CSS)</div>
-                  <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/offline_map" target="_blank">GitHub</a>
+                  <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/offline_map">GitHub</a>
                   </div>
                 </figcaption>
               </figure>
 
               <figure class="works-item">
-                <a class="works-image" href="https://github.com/ChinnanagoSGE/rain_cloud_radar" target="_blank">
-                  <img class="works-image fadein lazyloaded" src="img/works/map.png" alt="">
+                <a class="works-image" href="https://github.com/ChinnanagoSGE/rain_cloud_radar">
+                  <img class="works-image fadein lazyloaded" src="img/works/map.jpg" alt="">
                 </a>
                 <figcaption class="works-body">
                   <div class="works-title">雨雲レーダー</div>
                   <div class="works-text">GPSモジュールを取り付けたRaspberry Piで動作します．産学共同プロジェクトで管理していたものを個別でアップしました．<br>Yahoo! JavaScriptマップAPIを使用していますが，現在APIの提供が終了しています．(2021/02/21時点)<br>(Python/HTML/JavaScript/CSS)</div>
-                  <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/rain_cloud_radar" target="_blank">GitHub</a>
+                  <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/rain_cloud_radar">GitHub</a>
                   </div>
                 </figcaption>
               </figure>
 
               <!--
               <figure class="works-item">
-                <a class="works-image" href="https://github.com/ChinnanagoSGE/draw_canvas" target="_blank">
+                <a class="works-image" href="https://github.com/ChinnanagoSGE/draw_canvas">
                   <img class="works-image fadein lazyloaded" src="img/works/draw.png" alt="">
                 </a>
                 <figcaption class="works-body">
                   <div class="works-title">お絵描きツール</div>
                   <div class="works-text">図形を描画してWebサイトに変換するツールです．<br>作成途中で，図形を描けるところまでは作っています．（更新日：2021/03/03）<br>(HTML/JavaScript/CSS)</div>
-                  <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/draw_canvas" target="_blank">GitHub</a>
+                  <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/draw_canvas">GitHub</a>
                   </div>
                 </figcaption>
               </figure>
               -->
 
               <figure class="works-item">
-                <a href="img/works/coming_soon.png" target="_blank">
+                <a href="img/works/coming_soon.png">
                   <img class="works-image fadein lazyloaded" src="img/works/coming_soon.png" alt="">
                 </a>
                 <figcaption class="works-body">
@@ -517,14 +574,14 @@
           <div class="section-body contact">
             <ul class="contact-list">
               <li class="contact-item">
-                <a class="contact-image-wrapper" href="https://X.com/ojohojo_tech" target="_blank">
+                <a class="contact-image-wrapper" href="https://X.com/ojohojo_tech">
                   <img class="contact-image" src="img/contact/X.png" alt="">
                   <span class="contact-name">X</span>
                 </a>
               </li>
               
               <li class="contact-item">
-                <a class="contact-image-wrapper" href="https://github.com/ChinnanagoSGE" target="_blank">
+                <a class="contact-image-wrapper" href="https://github.com/ChinnanagoSGE">
                   <img class="contact-image" src="img/contact/GitHub.png" alt="">
                   <span class="contact-name">GitHub</span>
                 </a>
