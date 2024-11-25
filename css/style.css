@@ -248,33 +248,56 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
   height: 540px;
-  background: url(../img/header_runway_loop.gif) center/cover repeat;
   background-size: cover;
-  animation: bgiLoop 10s linear infinite;
 }
 
 .logo {
+  position: relative;
+  width: 100%;
+  height: 540px;
   text-align: center;
+  overflow: hidden;
 }
 
-.logo-name {
+.logo .video {
+  width: 100vw;
+  height: 540px;
+  object-fit: cover;
+  z-index: -100;
+  object-fit: cover;
+}
+
+.logo-content {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  justify-content: center;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-content .logo-name {
   font-family: "Cormorant Garamond", serif;
   font-size: 44px;
   line-height: 1;
-  display: block;
   margin-bottom: 5px;
-  text-align: center;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .logo-name span {
+  z-index: 1;
   opacity: 0;
   -webkit-transition: .6s ease-in-out;
   transition: .6s ease-in-out;
 }
 
 .logo-title {
+  z-index: 1;
   font-family: "Cormorant Garamond", serif;
   font-size: 88px;
   font-weight: normal;
@@ -285,6 +308,7 @@ li {
 }
 
 .logo-title span {
+  z-index: 1;
   opacity: 0;
   -webkit-transition: .6s ease-in-out;
   transition: .6s ease-in-out;
@@ -435,7 +459,7 @@ table {
 
 .career-school,
 .career-period {
-  font-size: 17px;
+  font-size: 110%;
   font-weight: bold;
 }
 
@@ -578,34 +602,39 @@ table {
  award
 ---------------------------------*/
 .award-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: -40px;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .award-item {
-  flex: 0 0 30%;
-  margin-right: 1%;
-  margin-left: 1%;
-  margin-bottom: 40px;
-  width: fit-content;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  height: auto;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
 }
 
-.award-item:nth-of-type(3n) {
-  margin-right: 0;
+.award-image {
+  height: 300px; /* 高さ固定 */
+  width: 100%; /* 幅を枠にフィット */
+  object-fit: contain; /* アスペクト比を維持し、画像全体を表示 */
+  background-color: #f5f5f5; /* 背景色 */
 }
 
 .award-body {
-  width: fit-content;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   text-align: center;
-  justify-content: center;
+  height: 100%;
 }
 
 .award-title {
@@ -613,16 +642,12 @@ table {
   margin-top: 8px;
 }
 
-.award-image fadein lazyloaded {
-  height: 100px;
-}
-
 .award-url:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
 }
 
 .award-image:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
 }
 
 /*--------------------------------
@@ -639,6 +664,7 @@ table {
 
 .publication-table tr{
   padding: 20px;
+  line-height: 2; /* 行間を広げる */
 }
 
 .publication-table th:first-child, .publication-table td:first-child {
@@ -673,30 +699,35 @@ table {
  Works
 ---------------------------------*/
 .works-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: -40px;
-  align-items: flex-start;
-  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
   margin: 0 auto;
-  justify-content: center;
 }
 
 .works-item {
-  flex: 0 0 30%;
-  margin-right: 2%;
-  margin-left: 2%;
-  margin-bottom: 40px;
-  width: fit-content;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-}
-
-.works-item:nth-of-type(3n) {
-  margin-right: 0;
+  height: auto;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
 }
 
 .works-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.works-caption {
   width: fit-content;
   margin: auto;
   text-align: center;
@@ -896,7 +927,6 @@ table {
 
   .award-item {
     flex: 0 0 48%;
-    margin-right: 0;
     margin-bottom: 30px;
   }
 
@@ -909,13 +939,8 @@ table {
     font-size: 10px;
   }
 
-  .works-list {
-    justify-content: space-between;
-  }
-
   .works-item {
     flex: 0 0 48%;
-    margin-right: 0;
     margin-bottom: 30px;
   }
 

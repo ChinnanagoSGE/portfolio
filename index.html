@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <meta property='og:type' content='website'>
   <meta property='og:title' content="Naoki's Portforio">
-  <meta property='og:url' content='URL入る'>
   <meta property='og:description' content="Naoki's Portforio">
   <meta name="description" content="Naoki's Portforio"/>
+  <meta name="robots" content="noindex, nofollow">
+
   <title>Naoki's portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
@@ -22,7 +23,11 @@
 <body>
   <!-- loading screen -->
   <div class="loading">
-    <div class="loading-animation"><img src="img/load.gif"/></div>
+    <div class="loading-animation">
+      <video class="video" webkit-playsinline playsinline muted autoplay loop>
+        <source src="img/load.webm" type="video/webm">
+      </video>
+    </div>
   </div>
   <script>
     (function () {
@@ -41,8 +46,13 @@
     <!-- .header -->
     <header class="header">
       <h1 class="logo">
-        <p class="logo-name">Naoki Hojo's</p>
-        <p class="logo-title">PORTFOLIO</p>
+        <video class="video" webkit-playsinline playsinline muted autoplay loop>
+          <source src="img/header_runway_loop.webm" type="video/webm">
+        </video>
+        <div class="logo-content">
+          <p class="logo-name">Naoki Hojo's<br></p>
+          <p class="logo-title">PORTFOLIO</p>
+        </div>
       </h1>
     </header>
     <!-- /.header -->
@@ -79,11 +89,11 @@
                 </tr>
                 <tr>
                   <th>Birthday</th>
-                  <td>2000年9月（23歳）</td>
+                  <td>2000年9月（24歳）</td>
                 </tr>
                 <tr>
                   <th>Profession</th>
-                  <td>大学院生（修士1年生）</td>
+                  <td>大学院生（修士2年生）</td>
                 </tr>
               </table>
               <br>
@@ -99,7 +109,7 @@
                   高専から大学に3年次編入し，現在情報系大学院生の北条直樹です．<br>
                   高専では電子工学科に在籍し，卒業研究では生体電気信号を用いたHMIの開発を行いました．<br>
                   また，高専時代には産学共同プロジェクトに参加しており，電子工作とプログラミングの技術を活かして，ラリーレースに出場する車の補助システムの開発を行いました．<br>
-                  現在は，大学の学部から引き続きで脳波や脳神経細胞などの『脳機能に関する研究』や，『アイトラッキング』の応用研究，『音声認識』の研究を行っています．<br>
+                  現在は，大学の学部から引き続きで脳波や脳神経細胞などの『脳機能に関する研究』や，『アイトラッキング』の応用研究，『構音障害者の方に向けた音声認識』の研究などを行っています．<br>
                 </p>
               </div>
             </div>
@@ -175,6 +185,12 @@
                           <p class="career-detail">
                             東日本電信電話株式会社（NTT東日本） インターンシップ参加
                           </p>
+                          <p class="career-detail">
+                            日本電気株式会社（NEC） インターンシップ参加
+                          </p>
+                          <p class="career-detail">
+                            医療データの受託解析を行う会社でアルバイトに従事
+                          </p>
                         </div>
                       </td>
                     </tr>
@@ -211,7 +227,7 @@
                     <div class="rate rate5"></div>
                   </div>
                   <p>
-                    経験年数：6年<br>
+                    経験年数：7年<br>
                     産学共同プロジェクトでのシステム開発や，脳波や筋電図のデータ解析・音声認識などの研究，
                     Kaggleやコンペなどのデータサイエンスで使用しており，最も扱い慣れている言語です．
                   </p>
@@ -317,6 +333,30 @@
             <div class="award-list js-my-gallery">
 
               <figure class="award-item">
+                <a class="award-image" href="https://www.ieice.org/jpn_r/activities/taikai/general/2024/index.html">
+                  <img class="award-image fadein lazyloaded" src="img/award/ieice_iss.png" alt="">
+                </a>
+                <figcaption class="award-body">
+                  <div class="award-title">電子情報通信学会総合大会 情報・システムソサイエティ 優秀ポスター賞</div>
+                  <div class="award-text">発表題目<br>「ラベルなし音声を用いた自己教師あり学習による器質性構音障害者の音声認識」</div>
+                  <div class="award-url"><a class="award-url-link" href="https://dac.heteml.net/jpn_r/junior/poster_session_awards_2024.html">詳細はこちら</a></div>
+                  <div class="award-url"><a class="award-url-link" href="https://www.ieice.org/iss/iss_r/jpn/wp/wp-content/themes/iss/assets/pdf/issposter/2024/ISS-SP-040.pdf">論文はこちら</a></div>
+                </figcaption>
+              </figure>
+
+              <figure class="award-item">
+                <a class="award-image" href="https://www.ieice.org/jpn_r/activities/taikai/general/2024/index.html">
+                  <img class="award-image fadein lazyloaded" src="img/award/ieice_iss_2.png" alt="">
+                </a>
+                <figcaption class="award-body">
+                  <div class="award-title">電子情報通信学会総合大会 情報・システムソサイエティ 優秀ポスター賞</div>
+                  <div class="award-text">発表題目<br>「表情認知における注意欠如多動症傾向とスキャニングパターンの関連」</div>
+                  <div class="award-url"><a class="award-url-link" href="https://dac.heteml.net/jpn_r/junior/poster_session_awards_2024.html">詳細はこちら</a></div>
+                  <div class="award-url"><a class="award-url-link" href="https://www.ieice.org/iss/iss_r/jpn/wp/wp-content/themes/iss/assets/pdf/issposter/2024/ISS-SP-009.pdf">論文はこちら</a></div>
+                </figcaption>
+              </figure>
+
+              <figure class="award-item">
                 <a class="award-image" href="http://www.ieee-lifetech.org/2022/awards.html">
                   <img class="award-image fadein lazyloaded" src="img/award/ieee_life_tech.JPG" alt="">
                 </a>
@@ -391,7 +431,7 @@
             <h2 class="heading-primary">PUBLICATIONS</h2>
           </div>
           <p class="section-lead">
-            これまで投稿した論文や発表した学会です！
+            これまで投稿した論文や発表した学会です！（共著を含みます．）
           </p>
           <div class="section-body publication">
             <div class="publication-list">
@@ -400,31 +440,73 @@
                   <p>
                     <table>
                       <tr>
-                        <td>2021年1月</td>
+                        <td>2024年6月</td>
                         <td>
-                          <p class="publication-conference">第26回 高専シンポジウム</p>
+                          <p class="publication-conference">Proceedings of the 2024 Symposium on Eye Tracking Research and Applications</p>
                           <div class="publication-paper">
-                            <a class="publication-url-japan" href="https://kosen-sympo.org/26th/presenaward/">「舌骨上筋群のsEMGを用いた可変長時間での黙声単語の推定」</a><br>
+                            <a class="publication-url" href="https://dl.acm.org/doi/10.1145/3649902.3655650"> “Attempts on detecting Alzheimer's disease by fine-tuning pre-trained model with Gaze Data”</a><br>
                           </div>
                           <br>
                         </td>
                       </tr>
                       <tr>
-                        <td>2022年3月</td>
+                      <tr>
+                        <td>2024年6月</td>
                         <td>
-                          <p class="publication-conference">The 2022 IEEE 4th Global Conference on Life Sciences and Technologies (LifeTech 2022)</p>
+                          <p class="publication-conference">第39回 日本生体磁気学会</p>
                           <div class="publication-paper">
-                            <a class="publication-url" href="https://ieeexplore.ieee.org/document/9754898"> “Development of communication system from EMG of suprahyoid muscles using deep learning”</a><br>
+                            <a class="publication-url-japan" href="https://www.cfme.chiba-u.jp/~jbiomag39/index.html">「軽量な畳み込みネットワークを用いたDeep Priorによるリードフィールドと電流源の同時推定」</a><br>
                           </div>
                           <br>
                         </td>
                       </tr>
                       <tr>
-                        <td>2023年3月</td>
+                        <td>2024年3月</td>
                         <td>
-                          <p class="publication-conference">2023 RISP International Workshop on NCSP</p>
+                          <p class="publication-conference">2024年電子情報通信学会総合大会</p>
                           <div class="publication-paper">
-                            <a class="publication-url" href="http://www.me.cs.scitec.kobe-u.ac.jp/~takigu/pdf/2023/hojo-risp.pdf"> “EEG Current Source Localization Using Deep Prior”</a><br>
+                            <a class="publication-url-japan" href="https://www.ieice.org/iss/iss_r/jpn/wp/wp-content/themes/iss/assets/pdf/issposter/2024/ISS-SP-040.pdf">「ラベルなし音声を用いた自己教師あり学習による器質性構音障害者の音声認識」</a><br>
+                            <a class="publication-url-japan" href="https://www.ieice.org/iss/iss_r/jpn/wp/wp-content/themes/iss/assets/pdf/issposter/2024/ISS-SP-009.pdf">「表情認知における注意欠如多動症傾向とスキャニングパターンの関連」</a><br>
+                          </div>
+                          <br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2024年1月</td>
+                        <td>
+                          <p class="publication-conference">The Twenty-Ninth International Symposium on Artificial Life and Robotics 2024</p>
+                          <div class="publication-paper">
+                            <a class="publication-url" href="https://isarob.org/symposium/index.php?main_page=arob29"> “Recognition of Silent Words and Tongue Orientation from EMG”</a><br>
+                          </div>
+                          <br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2023年11月</td>
+                        <td>
+                          <p class="publication-conference">第43回医療情報学連合大会（第24回日本医療情報学会学術大会）</p>
+                          <div class="publication-paper">
+                            <a class="publication-url-japan" href="https://confit.atlas.jp/guide/organizer/jcmi/jcmi2023/subject/3-C-3-04/search;jsessionid=5C2C2DACC71623B2D28B4E09CE7AC758?eventCode=jcmi2023&subjectCode=3-C-3-04">「発話困難者の音声コミュニケーションを支援する音声認識技術」</a><br>
+                          </div>
+                          <br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2023年6月</td>
+                        <td>
+                          <p class="publication-conference">ICASSP 2023 EEG Workshop</p>
+                          <div class="publication-paper">
+                            <a class="publication-url" href="https://ieeexplore.ieee.org/document/10193746"> “EEG Source Estimation Using Deep Prior without a Subject's Individual Lead Field”</a><br>
+                          </div>
+                          <br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2023年5月</td>
+                        <td>
+                          <p class="publication-conference">ISACM and JBBS 2023</p>
+                          <div class="publication-paper">
+                            <a class="publication-url" href="https://web.apollon.nta.co.jp/isacm2023/index.html"> “Simultaneous estimation of a lead field and current sources of EEG using Deep Prior”</a><br>
                           </div>
                           <br>
                         </td>
@@ -441,21 +523,31 @@
                         </td>
                       </tr>
                       <tr>
-                        <td>2023年5月</td>
+                        <td>2023年3月</td>
                         <td>
-                          <p class="publication-conference">ISACM and JBBS 2023</p>
+                          <p class="publication-conference">2023 RISP International Workshop on NCSP</p>
                           <div class="publication-paper">
-                            <a class="publication-url" href="https://web.apollon.nta.co.jp/isacm2023/index.html"> “Simultaneous estimation of a lead field and current sources of EEG using Deep Prior”</a><br>
+                            <a class="publication-url" href="http://www.me.cs.scitec.kobe-u.ac.jp/~takigu/pdf/2023/hojo-risp.pdf"> “EEG Current Source Localization Using Deep Prior”</a><br>
                           </div>
                           <br>
                         </td>
                       </tr>
                       <tr>
-                        <td>2023年6月</td>
+                        <td>2022年3月</td>
                         <td>
-                          <p class="publication-conference">ICASSP 2023 EEG Workshop</p>
+                          <p class="publication-conference">The 2022 IEEE 4th Global Conference on Life Sciences and Technologies (LifeTech 2022)</p>
                           <div class="publication-paper">
-                            <a class="publication-url" href="https://ieeexplore.ieee.org/document/10193746"> “EEG Source Estimation Using Deep Prior without a Subject's Individual Lead Field”</a><br>
+                            <a class="publication-url" href="https://ieeexplore.ieee.org/document/9754898"> “Development of communication system from EMG of suprahyoid muscles using deep learning”</a><br>
+                          </div>
+                          <br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2021年1月</td>
+                        <td>
+                          <p class="publication-conference">第26回 高専シンポジウム</p>
+                          <div class="publication-paper">
+                            <a class="publication-url-japan" href="https://kosen-sympo.org/26th/presenaward/">「舌骨上筋群のsEMGを用いた可変長時間での黙声単語の推定」</a><br>
                           </div>
                           <br>
                         </td>
@@ -480,13 +572,13 @@
           <p class="section-lead">
             これまでの制作実績です！
           </p>
-          <div class="section-body works">
+          <div class="section-body works-body">
             <div class="works-list js-my-gallery">
               <figure class="works-item">
                 <a class="works-image" href="https://github.com/ChinnanagoSGE/portfolio">
                   <img class="works-image fadein lazyloaded" src="img/works/portfolio.png" alt="">
                 </a>
-                <figcaption class="works-body">
+                <figcaption class="works-caption">
                   <div class="works-title">ポートフォリオ</div>
                   <div class="works-text">自己紹介ポートフォリオサイトです．<br>(HTML/CSS/JavaScript)</div>
                   <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/portfolio">GitHub</a>
@@ -498,9 +590,9 @@
                 <a class="works-image" href="https://drive.google.com/drive/folders/1PtKQWhW64_mTRkEUdZfhyoLEIdSSh0LG?usp=sharing">
                   <img class="works-image fadein lazyloaded" src="img/works/sotsuken.jpg" alt="">
                 </a>
-                <figcaption class="works-body">
+                <figcaption class="works-caption">
                   <div class="works-title">卒業研究</div>
-                  <div class="works-text">高専の卒業研究の論文等です．<br>(Python(プログラムの共有なし))</div>
+                  <div class="works-text">高専での卒業研究の論文等です．<br>(Python(プログラムの共有なし))</div>
                   <div class="works-url"><a class="works-url-link" href="https://drive.google.com/drive/folders/1PtKQWhW64_mTRkEUdZfhyoLEIdSSh0LG?usp=sharing">Google Drive</a>
                   </div>
                 </figcaption>
@@ -510,7 +602,7 @@
                 <a class="works-image" href="https://github.com/ChinnanagoSGE/offline_map">
                   <img class="works-image fadein lazyloaded" src="img/works/map.jpg" alt="">
                 </a>
-                <figcaption class="works-body">
+                <figcaption class="works-caption">
                   <div class="works-title">オフラインマップ</div>
                   <div class="works-text">GPSモジュールを取り付けたRaspberry Piで動作します．産学共同プロジェクトで管理していたものを個別でアップしました．<br>(Python/HTML/JavaScript/CSS)</div>
                   <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/offline_map">GitHub</a>
@@ -522,7 +614,7 @@
                 <a class="works-image" href="https://github.com/ChinnanagoSGE/rain_cloud_radar">
                   <img class="works-image fadein lazyloaded" src="img/works/map.jpg" alt="">
                 </a>
-                <figcaption class="works-body">
+                <figcaption class="works-caption">
                   <div class="works-title">雨雲レーダー</div>
                   <div class="works-text">GPSモジュールを取り付けたRaspberry Piで動作します．産学共同プロジェクトで管理していたものを個別でアップしました．<br>Yahoo! JavaScriptマップAPIを使用していますが，現在APIの提供が終了しています．(2021/02/21時点)<br>(Python/HTML/JavaScript/CSS)</div>
                   <div class="works-url"><a class="works-url-link" href="https://github.com/ChinnanagoSGE/rain_cloud_radar">GitHub</a>
@@ -544,15 +636,15 @@
               </figure>
               -->
 
-              <figure class="works-item">
+              <!-- <figure class="works-item">
                 <a href="img/works/coming_soon.png">
                   <img class="works-image fadein lazyloaded" src="img/works/coming_soon.png" alt="">
                 </a>
-                <figcaption class="works-body">
+                <figcaption class="works-caption">
                   <div class="works-title">Comming soon</div>
                   <div class="works-text">No Data</div>
                 </figcaption>
-              </figure>
+              </figure> -->
 
             </div>
           </div>
