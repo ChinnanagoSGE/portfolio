@@ -642,13 +642,12 @@ table {
 }
 
 .publication-table td {
-  padding-left: 30px;
+  padding-left: 20px;
   text-align: left;
 } 
 
 .publication-table tr{
   padding: 20px;
-  line-height: 2; /* 行間を広げる */
 }
 
 .publication-table th:first-child, .publication-table td:first-child {
