@@ -281,12 +281,12 @@ li {
   flex-direction: column;
 }
 
-.logo-content .logo-name {
+.logo-name {
   font-family: "Cormorant Garamond", serif;
   font-size: 44px;
   line-height: 1;
   margin-bottom: 5px;
-  /* color: #fff; */
+  color: #fff;
 }
 
 .logo-name span {
